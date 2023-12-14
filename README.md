@@ -1,4 +1,4 @@
-# Práctica 3.4 Máquinas de Vector de Soporte
+# Práctica 3.4 Máquinas de Vectores de Soporte (SVM)
 ## Minería de Datos
 
 ### Integrantes:
