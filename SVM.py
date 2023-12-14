@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 class support_vector_machine:
     def __init__(self, learning_rate=0.001, lambda_=0.01, epochs=1000):
         self.learning_rate = learning_rate
-        self.lambda_ = lambda_  # Factor de penaluzación
+        self.lambda_ = lambda_  # Factor de penalización
         self.epochs = epochs  # num iteraciones
         self.w = None  # weights
         self.b = None  # intercept
