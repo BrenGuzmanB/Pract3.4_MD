@@ -15,7 +15,7 @@ from SVM import support_vector_machine as SVM
 
 #%% CONJUNTO DE DATOS
 
-X, y = make_blobs(n_samples=200, n_features=2, centers=2, random_state=0, cluster_std=0.45)
+X, y = make_blobs(n_samples=200, n_features=2, centers=2, random_state=1998, cluster_std=0.45)
 
 plt.scatter(X[:, 0], X[:, 1], c=y, cmap='winter', edgecolor='k', marker='p')
 plt.title('Conjunto de datos sintético')
@@ -35,3 +35,13 @@ print("Dataset (75%-25%), accuracy:" ,accuracy_score(svm.predict(X_test),y_test)
 svm.plot_svm(X_train , y_train, X_test, y_test, 'SVM para conjunto de datos sintético (75%-25%)' )
 
 
+#%% HOLDOUT PARA 80%-20%
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=3)
+
+svm = SVM()
+w,b = svm.fit(X_train,y_train)
+
+print("Dataset (80%-20%), accuracy:" ,accuracy_score(svm.predict(X_test),y_test))
+
+svm.plot_svm(X_train , y_train, X_test, y_test, 'SVM para conjunto de datos sintético (80%-20%)' )

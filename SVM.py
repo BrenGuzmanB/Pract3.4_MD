@@ -5,7 +5,7 @@ Created on Sun Dec 10 01:36:36 2023
 """
 
 import numpy as np
-
+import matplotlib.pyplot as plt
 
 class support_vector_machine:
     def __init__(self, learning_rate=0.001, lambda_=0.01, epochs=1000):
